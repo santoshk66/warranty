@@ -34,9 +34,12 @@ app.post("/send-warranty-email", async (req, res) => {
     res.json({ success: true });
   } catch (error) {
     console.error("SendGrid error:", error.response?.body || error.message);
-    res.status(500).json({ success: false, error: error.message });
+    res.status(500).json({
+      success: false,
+      error: error.response?.body || error.message
+    });
   }
-});
+
 
 app.listen(PORT, () => {
   console.log(`✅ Warranty email server running on port ${PORT}`);
