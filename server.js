@@ -3,18 +3,25 @@ const bodyParser = require("body-parser");
 const sgMail = require("@sendgrid/mail");
 
 const app = express();
-const PORT = process.env.PORT;
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY); // Use env var
+// ✅ Load SendGrid API Key from Render environment
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// Middleware
 app.use(bodyParser.json());
 
+// Health check route (optional)
+app.get("/", (req, res) => {
+  res.send("✅ Warranty Email API is running!");
+});
+
+// POST route for sending warranty email
 app.post("/send-warranty-email", async (req, res) => {
   const data = req.body;
 
   const msg = {
     to: data.email,
-    from: "contact@maizic.com", // Replace with verified sender
+    from: "contact@maizic.com", // ✅ Replace with your verified SendGrid sender
     subject: "🎉 Your Maizic Warranty Has Been Registered!",
     html: `
       <h2>Hello ${data.name},</h2>
@@ -39,8 +46,9 @@ app.post("/send-warranty-email", async (req, res) => {
       error: error.response?.body || error.message
     });
   }
+});
 
-
-app.listen(PORT, () => {
-  console.log(`✅ Warranty email server running on port ${PORT}`);
+// ✅ Bind to Render-assigned port ONLY
+app.listen(process.env.PORT, () => {
+  console.log(`✅ Warranty email server running on port ${process.env.PORT}`);
 });
