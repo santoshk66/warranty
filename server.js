@@ -14,7 +14,7 @@ app.post("/send-warranty-email", async (req, res) => {
 
   const msg = {
     to: data.email,
-    from: "your_verified_sender@example.com", // Replace with verified sender
+    from: "contact@maizic.com", // Replace with verified sender
     subject: "🎉 Your Maizic Warranty Has Been Registered!",
     html: `
       <h2>Hello ${data.name},</h2>
