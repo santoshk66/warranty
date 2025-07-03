@@ -54,7 +54,7 @@ app.post('/send-warranty-email', async (req, res) => {
           <!-- Header -->
           <tr>
             <td style="background-color: #008060; text-align: center; padding: 20px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
-              <img src="https://via.placeholder.com/150x50?text=Maizic+Logo" alt="Maizic Logo" style="max-width: 150px;">
+              <img src="https://www.maizic.com/cdn/shop/files/maizic_logo_95x.png?v=1690012533" alt="Maizic Logo" style="max-width: 100px;">
               <h1 style="color: #ffffff; font-size: 24px; margin: 10px 0;">Warranty Registration Confirmation</h1>
             </td>
           </tr>
