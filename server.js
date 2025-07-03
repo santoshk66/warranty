@@ -51,4 +51,5 @@ app.post("/send-warranty-email", async (req, res) => {
 // ✅ Bind to Render-assigned port ONLY
 app.listen(process.env.PORT, () => {
   console.log(`✅ Warranty email server running on port ${process.env.PORT}`);
+  console.log("Detected Render port:", process.env.PORT);
 });
