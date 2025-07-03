@@ -1,5 +1,5 @@
 {
-  "name": "maizic-warranty-email",
+  "name": "warranty",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
