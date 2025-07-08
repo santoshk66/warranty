@@ -101,7 +101,7 @@ app.post('/send-warranty-email', async (req, res) => {
                 <a href="https://facebook.com/maizicsmarthome" style="color: #008060; text-decoration: none; margin: 0 5px;">Facebook</a> |
                 <a href="https://instagram.com/maizicsmarthome" style="color: #008060; text-decoration: none; margin: 0 5px;">Instagram</a>
               </p>
-              <p style="color: #777777; font-size: 12px; margin: 10px 0;">If you have any questions, contact us at <a href="mailto:support@maizic.com" style="color: #008060; text-decoration: none;">support@maizic.com</a>.</p>
+              <p style="color: #777777; font-size: 12px; margin: 10px 0;">If you have any questions, contact us at <a href="mailto:contact@maizic.com" style="color: #008060; text-decoration: none;">contact@maizic.com</a>.</p>
             </td>
           </tr>
         </table>
